@@ -1,5 +1,5 @@
 console.log(window.location.href);
-if (window.location.href == "http://localhost:5500/") {
+if (window.location.href == "http://https://tamarazivkovic994.github.io/project-SQL/") {
 
 
 
@@ -38,7 +38,7 @@ function checkInsert(data) {
 
     if (data.data == "ok") {
 
-        window.location.href = "http://localhost:5500/login.html"
+        window.location.href = "https://tamarazivkovic994.github.io/project-SQL/login.html"
     } else {
 
         alert("Korisnik vec postoji - ako implemtirate na serveru deo koji proverava postojanje korisnika");
@@ -47,7 +47,7 @@ function checkInsert(data) {
 }
 
 
-if (window.location.href == "http://localhost:5500/login.html") {
+if (window.location.href == "https://tamarazivkovic994.github.io/project-SQL/login.html") {
 
     const form = document.querySelector("form");
 
@@ -84,7 +84,7 @@ function checkLogin(data) {
     if (data.data == "ok") {
 
         localStorage.setItem("user", JSON.stringify({ username: data.result[0].USERNAME, rola: data.result[0].ROLA }));
-        window.location.href = "http://localhost:5500/home.html";
+        window.location.href = "https://tamarazivkovic994.github.io/project-SQL/home.html";
 
     }else {
 
@@ -95,10 +95,10 @@ function checkLogin(data) {
 
 
 
-if (window.location.href == "http://localhost:5500/home.html") {
+if (window.location.href == "https://tamarazivkovic994.github.io/project-SQL/home.html") {
 
     if (localStorage.getItem("user") == null) {
-        window.location.href = "http://localhost:5500/login.html";
+        window.location.href = "https://tamarazivkovic994.github.io/project-SQL/login.html";
     }
 
     if (JSON.parse(localStorage.getItem("user"))) {
@@ -113,7 +113,7 @@ if (window.location.href == "http://localhost:5500/home.html") {
         document.querySelector("#logout").addEventListener("click", function () {
 
             localStorage.removeItem("user");
-            window.location.href = "http://localhost:5500/login.html";
+            window.location.href = "https://tamarazivkovic994.github.io/project-SQL/login.html";
 
         }
 
